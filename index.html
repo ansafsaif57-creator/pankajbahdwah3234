@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Badshah Broking | Stock Market Community</title>
+  <meta
+    name="description"
+    content="Join Badshah Broking's free Telegram community for stock market education, price action learning, option analysis and risk management concepts."
+  />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1430134189072533');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1430134189072533&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+  <!-- End Meta Pixel -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 15px;
+      background:
+        radial-gradient(circle at top, rgba(251, 191, 36, 0.12), transparent 35%),
+        linear-gradient(135deg, #030303, #111827);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+      animation: fadeIn 0.9s ease;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      padding: 9px 18px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(251, 191, 36, 0.8);
+      border-radius: 50px;
+      background: rgba(251, 191, 36, 0.10);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.08);
+    }
+
+    /* Profile Image */
+    .profile-wrapper {
+      position: relative;
+      width: 125px;
+      height: 125px;
+      margin: 0 auto 18px;
+    }
+
+    .profile-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      animation: rotate 8s linear infinite;
+    }
+
+    .logo {
+      width: 125px;
+      height: 125px;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fbbf24;
+      background: #111;
+      box-shadow:
+        0 0 25px rgba(251, 191, 36, 0.45),
+        0 0 70px rgba(251, 191, 36, 0.12);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h1 {
+      margin-top: 8px;
+      font-size: 36px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #fbbf24;
+      text-shadow: 0 0 25px rgba(251, 191, 36, 0.18);
+    }
+
+    .subtitle {
+      margin-top: 15px;
+      color: #ddd;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    .subtitle span {
+      display: inline-block;
+      margin: 2px 0;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .stat {
+      width: 145px;
+      padding: 14px 10px;
+      background: rgba(22, 22, 22, 0.85);
+      border: 1px solid #292929;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .stat strong {
+      display: block;
+      color: #fbbf24;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: #999;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* CTA */
+    .btn {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #050505;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.35);
+      transition: 0.25s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 40px rgba(251, 191, 36, 0.65);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .note {
+      margin-top: 13px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    /* Trust Box */
+    .trust-box {
+      margin-top: 22px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .trust-box strong {
+      color: #fbbf24;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 22px;
+      padding-bottom: 5px;
+      color: #666;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .ads {
+      display: inline-block;
+      margin-top: 9px;
+      color: #fbbf24;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .ads:hover {
+      color: #fff;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 22px rgba(251, 191, 36, 0.35);
+      }
+
+      50% {
+        box-shadow: 0 0 35px rgba(251, 191, 36, 0.65);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      .container {
+        max-width: 390px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .logo,
+      .profile-wrapper {
+        width: 115px;
+        height: 115px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="badge">
+      📈 STOCK MARKET COMMUNITY
+    </div>
+
+    <!-- =========================================
+         PROFILE IMAGE
+         Apni direct image URL neeche paste karein
+         ========================================= -->
+    <div class="profile-wrapper">
+      <img
+        src="http://ss123.adpullse.in/wp-content/uploads/2026/10/photo_2026-10-04-15.45.37.jpeg"
+        class="logo"
+        alt="Badshah Broking Profile"
+      />
+    </div>
+
+    <h1>PANKAJ BHARDWAJ WAY2LAABH</h1>
+
+    <p class="subtitle">
+      <span>📊 Stock Option Analysis</span><br>
+      <span>🎯 Price Action Learning</span><br>
+      <span>📈 Stock Market Education</span><br>
+      <span>🛡️ Risk Management Concepts</span>
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>26K+</strong>
+        <span>Members</span>
+      </div>
+
+      <div class="stat">
+        <strong>Daily</strong>
+        <span>Updates</span>
+      </div>
+
+    </div>
+
+    <!-- Telegram CTA -->
+    <a
+      href="https://t.me/+i9rKoYpOpOliYjU9"
+      class="btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="fbq('track', 'Lead');"
+    >
+      🚀 Join Free Telegram Community
+    </a>
+
+    <div class="note">
+      Free Access • Educational Content • Beginner Friendly
+    </div>
+
+    <div class="trust-box">
+      📚 Learn market concepts, understand price action and
+      improve your trading knowledge with educational content.
+      <br><br>
+      <strong>⚠️ No Guaranteed Returns</strong>
+    </div>
+
+    <footer class="footer">
+
+      For Educational Purposes Only.<br>
+      Trading & Investing Involves Risk.
+
+      <br>
+
+      <a
+        href="https://t.me/+aTUbkZxGi-c1N2I9"
+        class="ads"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🚀 Ads Managed By Digital Growth Zone
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
